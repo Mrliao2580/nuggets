@@ -2,7 +2,7 @@
  * @Author: lzh
  * @Date: 2022-09-21 18:24:46
  * @LastEditors: lzh
- * @LastEditTime: 2022-09-28 17:20:47
+ * @LastEditTime: 2022-09-28 17:46:16
  * @Description: app
 -->
 <template>
@@ -34,17 +34,14 @@ export default {
 </script>
 
 <style lang="less">
-#app {
-  * {
-    padding: 0;
-    margin: 0;
-  }
+* {
+  padding: 0;
+  margin: 0;
 }
-
 #changeLang {
   height: auto;
   position: fixed;
-  top: 40px;
+  top: 10px;
   right: 40px;
   z-index: 999;
   display: flex;

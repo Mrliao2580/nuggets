@@ -2,7 +2,7 @@
  * @Author: lzh
  * @Date: 2022-09-21 18:24:46
  * @LastEditors: lzh
- * @LastEditTime: 2022-09-28 16:52:10
+ * @LastEditTime: 2022-09-28 17:27:05
  * @Description: main
  */
 import Vue from 'vue'
@@ -14,6 +14,11 @@ import store from './store'
  * 引入i18n国际化
  */
 import i18n from './i18n/';
+
+// 導入 Vant
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 
 Vue.config.productionTip = false
 
