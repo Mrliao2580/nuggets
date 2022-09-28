@@ -1,19 +1,43 @@
+<!--
+ * @Author: lzh
+ * @Date: 2022-09-21 18:24:50
+ * @LastEditors: lzh
+ * @LastEditTime: 2022-09-28 18:33:39
+ * @Description: 描述文档
+-->
+
 # nuggets
 
-## Project setup
+### 记录掘金知识点
+
+- vue2
+- 国际化 i18n
+- 组件 Vant
+
+更改 favicon.ico 图标 需要在 vue.config.js 加上以下代码
+
 ```
-npm install
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true,
+  pwa: {
+    iconPaths: {
+      favicon32: 'favicon.ico',
+      favicon16: 'favicon.ico',
+      appleTouchIcon: 'favicon.ico',
+      maskIcon: 'favicon.ico',
+      msTileImage: 'favicon.ico'
+    }
+  }
+})
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+> **下载**
 
-### Compiles and minifies for production
 ```
-npm run build
+  git clone https://github.com/Mrliao2580/nuggets.git
+    =>
+      npm i
+    =>
+      npm run dev
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
