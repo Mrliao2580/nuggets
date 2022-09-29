@@ -2,7 +2,7 @@
  * @Author: lzh
  * @Date: 2022-09-21 18:24:50
  * @LastEditors: lzh
- * @LastEditTime: 2022-09-28 18:33:39
+ * @LastEditTime: 2022-09-29 18:03:59
  * @Description: 描述文档
 -->
 
@@ -12,7 +12,7 @@
 
 - vue2
 - 国际化 i18n
-- 组件 Vant
+- UI组件 Vant element
 
 更改 favicon.ico 图标 需要在 vue.config.js 加上以下代码
 
