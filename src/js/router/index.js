@@ -2,7 +2,7 @@
  * @Author: lzh
  * @Date: 2022-09-21 18:24:46
  * @LastEditors: lzh
- * @LastEditTime: 2022-09-28 16:44:30
+ * @LastEditTime: 2022-09-29 15:56:11
  * @Description: file content
  */
 import Vue from 'vue'
@@ -13,12 +13,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'demo1',
-    component: () => import("@/views/demo/demo1.vue"),
+    name: 'index',
+    component: () => import("@/views/index.vue"),
   },
   {
-    path:"/demo1",
-    name:"demo1",
+    path: "/demo1",
+    name: "demo1",
     component: () => import("@/views/demo/demo1.vue"),
   }
 ]
