@@ -1,0 +1,23 @@
+{
+  "id": "3680438",
+  "name": "nuggets",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1487395",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "8327185",
+      "name": "weixin",
+      "font_class": "weixin",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    }
+  ]
+}

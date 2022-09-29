@@ -2,7 +2,7 @@
  * @Author: lzh
  * @Date: 2022-09-21 18:24:46
  * @LastEditors: lzh
- * @LastEditTime: 2022-09-29 17:16:59
+ * @LastEditTime: 2022-09-29 17:43:58
  * @Description: app
 -->
 <template>
@@ -47,9 +47,9 @@
         <p class="desc" v-text="$t('Keep the love')"></p>
         <p class="desc" v-text="$t('Go to shanhai')"></p>
         <div class="qq_wx">
-          <div class="icon">qq</div>
+          <div @click="copyValue('2973075721')" class="icon q_i"><i class="iconfont">&#xe603;</i></div>
           &nbsp;
-          <div class="icon">wx</div>
+          <div @click="copyValue('15674637680')" class="icon v_i"><i class="iconfont">&#xe60c;</i></div>
         </div>
         <div class="img-box">
           <img src="http://cdn.heblogs.cn/1649044225311_avatar-large-1.webp" />
@@ -92,6 +92,9 @@ export default {
       }
       return state;
     },
+    copyValue(val){
+      console.log(val);
+    }
   },
 };
 </script>
@@ -110,7 +113,7 @@ export default {
   padding: 25px;
   letter-spacing: 1.5px;
   overflow: hidden;
-  // height: 360px;
+  height: 382px;
   width: 240px;
   border-radius: 14px;
   .changeLang {
@@ -162,6 +165,8 @@ export default {
   .qq_wx {
     display: flex;
     padding-top: 10px;
+    justify-content: space-between;
+    width: 92px;
     .icon {
       border-radius: 50%;
       background-color: #fff;
@@ -171,6 +176,34 @@ export default {
       text-align: center;
       line-height: 36px;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        font-size: 20px;
+        color: #000;
+        transition: all 0.2s ease-in;
+      }
+    }
+    .v_i:hover {
+      background-color: #07c160;
+      width: 40px;
+      height: 40px;
+      transition: all 0.2s ease-in;
+      i {
+        color: #fff !important;
+        font-size: 24px;
+      }
+    }
+    .q_i:hover {
+      background-color: #12b7f5;
+      width: 40px;
+      height: 40px;
+      transition: all 0.2s ease-in;
+      i {
+        color: #fff !important;
+        font-size: 24px;
+      }
     }
   }
   .img-box {

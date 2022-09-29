@@ -2,7 +2,7 @@
  * @Author: lzh
  * @Date: 2022-09-21 18:24:46
  * @LastEditors: lzh
- * @LastEditTime: 2022-09-28 17:27:05
+ * @LastEditTime: 2022-09-29 17:25:58
  * @Description: main
  */
 import Vue from 'vue'
@@ -10,6 +10,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './js/router'
 import store from './store'
+// 導入 iconfont
+import './assets/iconfont/iconfont.css'
 /**
  * 引入i18n国际化
  */
