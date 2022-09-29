@@ -2,7 +2,7 @@
  * @Author: lzh
  * @Date: 2022-09-21 18:24:46
  * @LastEditors: lzh
- * @LastEditTime: 2022-09-29 15:51:05
+ * @LastEditTime: 2022-09-29 17:16:59
  * @Description: app
 -->
 <template>
@@ -17,19 +17,35 @@
         <p class="time_name">
           <span>👋 </span>
           <span v-text="getTimeName()"></span>
-          <span>&nbsp;我是</span>
+          <span>&nbsp;{{ $t('I am') }}</span>
         </p>
-        <p class="user_name">&nbsp;Mr_liao</p>
-        <p class="desc">
+        <p class="user_name">&nbsp;{{ $t('Mr_liao') }}</p>
+        <p class="desc" v-if="this.$i18n.locale == 'zh'">
           这有关于
           <b>产品、设计、开发</b>
           相关的问题和看法。
         </p>
-        <p class="desc">
+        <p
+          v-else
+          class="desc"
+          v-text="
+            $t(
+              'There are questions and opinions about the product, design, and development'
+            )
+          "
+        ></p>
+        <p class="desc" v-if="this.$i18n.locale == 'zh'">
           希望你可以在这里找到对你有用的<b>知识</b>和<b>教程</b>。
         </p>
-        <p class="desc">保持热爱</p>
-        <p class="desc">奔赴山海</p>
+        <p
+          class="desc"
+          v-else
+          v-text="
+            $t('I hope you find some useful knowledge and tutorials here')
+          "
+        ></p>
+        <p class="desc" v-text="$t('Keep the love')"></p>
+        <p class="desc" v-text="$t('Go to shanhai')"></p>
         <div class="qq_wx">
           <div class="icon">qq</div>
           &nbsp;
@@ -60,19 +76,19 @@ export default {
     },
     getTimeName() {
       let state = '';
-      const hours = new Date().getHours()
+      const hours = new Date().getHours();
       if (hours >= 0 && hours <= 10) {
-        state = `早上好!`;
+        state = `${this.$t('Good morning')}`;
       } else if (hours > 10 && hours <= 11) {
-        state = `上午好!`;
+        state = `${this.$t('Good morning')}`;
       } else if (hours > 11 && hours <= 13) {
-        state = `中午好!`;
+        state = `${this.$t('Good afternoon')}`;
       } else if (hours > 13 && hours <= 18) {
-        state = `下午好!`;
+        state = `${this.$t('Good afternoon')}`;
       } else if (hours > 18 && hours <= 21) {
-        state = `晚上好!`;
+        state = `${this.$t('Good evening')}`;
       } else if (hours > 21) {
-        state = `夜深了注意休息~`;
+        state = `${this.$t('ate at night pay attention to rest')}`;
       }
       return state;
     },
@@ -94,7 +110,7 @@ export default {
   padding: 25px;
   letter-spacing: 1.5px;
   overflow: hidden;
-  height: 360px;
+  // height: 360px;
   width: 240px;
   border-radius: 14px;
   .changeLang {
@@ -133,7 +149,7 @@ export default {
       line-height: 32px;
     }
     .user_name {
-      font-size: 26px;
+      font-size: 22px;
       line-height: 50px;
     }
     .desc {
