@@ -2,7 +2,7 @@
  * @Author: lzh
  * @Date: 2022-09-21 18:24:46
  * @LastEditors: lzh
- * @LastEditTime: 2022-09-29 17:43:58
+ * @LastEditTime: 2022-09-29 17:56:30
  * @Description: app
 -->
 <template>
@@ -47,9 +47,23 @@
         <p class="desc" v-text="$t('Keep the love')"></p>
         <p class="desc" v-text="$t('Go to shanhai')"></p>
         <div class="qq_wx">
-          <div @click="copyValue('2973075721')" class="icon q_i"><i class="iconfont">&#xe603;</i></div>
+          <div
+            v-clipboard:copy="'2973075721'"
+            v-clipboard:success="firstCopySuccess"
+            v-clipboard:error="firstCopyError"
+            class="icon q_i"
+          >
+            <i class="iconfont">&#xe603;</i>
+          </div>
           &nbsp;
-          <div @click="copyValue('15674637680')" class="icon v_i"><i class="iconfont">&#xe60c;</i></div>
+          <div
+            v-clipboard:copy="'15674637680'"
+            v-clipboard:success="firstCopySuccess"
+            v-clipboard:error="firstCopyError"
+            class="icon v_i"
+          >
+            <i class="iconfont">&#xe60c;</i>
+          </div>
         </div>
         <div class="img-box">
           <img src="http://cdn.heblogs.cn/1649044225311_avatar-large-1.webp" />
@@ -92,9 +106,22 @@ export default {
       }
       return state;
     },
-    copyValue(val){
+    copyValue(val) {
       console.log(val);
-    }
+    },
+    firstCopySuccess(e) {
+      // console.log('copy arguments e:', e);
+      // alert('复制成功!');
+      this.$message({
+        message: '复制成功!',
+        type: 'success',
+      });
+    },
+    firstCopyError(e) {
+      // console.log('copy arguments e:', e);
+      // alert('复制失败!');
+      this.$message.error('复制失败请稍后再试~~');
+    },
   },
 };
 </script>
